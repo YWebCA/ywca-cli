@@ -4,40 +4,21 @@ var target = process.argv[3]
 var concerns = require('cfg/concerns.json')
 var types = require('cfg/types.json')
 
-var response = "If this was working, we would have just "
-
 var tasks = {
   new: {
-    runner: function(target) {
-      console.log(response + "generated a workspace in directory " + target + ".")
-    },
+    runner: require('tasks/new'),
     help: "new"
   },
   install: {
-    runner: function(target) {
-      console.log(response + "installed the module ywca-xxxx-xxxx-" + target + ".")
-    },
+    runner: require('tasks/install'),
     help: "install"
   },
   search: {
-    runner: function(target) {
-      response += "searched npm for "
-      for (concern of concerns)
-        for (type of types)
-          response += "ywca-" + concern + "-" + type + "-" + target + ", "
-      response = response.substr(0, response.length - 2)
-      response = response.substr(0, response.lastIndexOf(",") + 1) + " and" + response.substr(response.lastIndexOf(",") + 1) + "."
-      console.log(response)
-    },
+    runner: require('tasks/search'),
     help: "search"
   },
   help: {
-    runner: function(target) {
-      if (tasks[target])
-        console.log(tasks[target].help)
-      else
-        console.log("No help documentation exists for " + target + ".")
-    },
+    runner: require('tasks/help'),
     help: "help"
   }
 }

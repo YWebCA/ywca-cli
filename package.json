@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/YWebCA/ywca-cli",
   "files": [
-    "cfg"
+    "cfg", 
+    "tasks"
   ],
   "bin": {
     "ywca": "index.js" 
