@@ -1,15 +1,8 @@
 var command = process.argv[2]
 var target = process.argv[3]
 
-var concerns = [
-  "core",
-  "extra"
-]
-var types = [
-  "demo",
-  "exercise",
-  "doc"
-]
+var concerns = require('cfg/concerns.json')
+var types = require('cfg/types.json')
 
 var response = "If this was working, we would have just "
 
