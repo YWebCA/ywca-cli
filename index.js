@@ -1,8 +1,8 @@
 var command = process.argv[2]
 var target = process.argv[3]
 
-var concerns = require('cfg/concerns.json')
-var types = require('cfg/types.json')
+var concerns = require('./cfg/concerns.json')
+var types = require('./cfg/types.json')
 
 var tasks = {
   new: {
