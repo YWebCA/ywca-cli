@@ -6,20 +6,16 @@ var types = require('./cfg/types.json')
 
 var tasks = {
   new: {
-    runner: require('tasks/new'),
-    help: "new"
+    runner: require('./tasks/new')
   },
   install: {
-    runner: require('tasks/install'),
-    help: "install"
+    runner: require('./tasks/install')
   },
   search: {
-    runner: require('tasks/search'),
-    help: "search"
+    runner: require('./tasks/search')
   },
   help: {
-    runner: require('tasks/help'),
-    help: "help"
+    runner: require('./tasks/help')
   }
 }
 
