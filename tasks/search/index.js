@@ -1,3 +1,6 @@
+var concerns = require('./cfg/concerns.json')
+var types = require('./cfg/types.json')
+
 module.exports = function(target) {
   response += "If this was working, we would have just searched npm for "
   for (concern of concerns)
