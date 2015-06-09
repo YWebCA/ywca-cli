@@ -1,6 +1,6 @@
 {
   "name": "ywca-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "CLI tool for YWeb Course Assitant",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,10 @@
     "url": "https://github.com/YWebCA/ywca-cli/issues"
   },
   "homepage": "https://github.com/YWebCA/ywca-cli",
+  "files": [
+    "cfg", 
+    "tasks"
+  ],
   "bin": {
     "ywca": "index.js" 
   }
