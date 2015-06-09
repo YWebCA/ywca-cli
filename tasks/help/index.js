@@ -1,6 +1,9 @@
+var fs = require('fs')
 module.exports = function(target) {
-  if (tasks[target])
-    console.log(tasks[target].help)
-  else
-    console.log("No help documentation exists for " + target + ".")
+  fs.readFile('doc/' + target + '.md', function(err, data) {
+  	if (err)
+  		console.log("No help documentation exists for " + target + ".")
+  	else
+  		console.log(data)
+  })
 }
