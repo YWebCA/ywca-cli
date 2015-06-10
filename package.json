@@ -20,10 +20,6 @@
     "url": "https://github.com/YWebCA/ywca-cli/issues"
   },
   "homepage": "https://github.com/YWebCA/ywca-cli",
-  "files": [
-    "cfg", 
-    "tasks"
-  ],
   "bin": {
     "ywca": "index.js" 
   }
