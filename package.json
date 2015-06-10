@@ -27,5 +27,4 @@
   "bin": {
     "ywca": "index.js" 
   }
-
 }
