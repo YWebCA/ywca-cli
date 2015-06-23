@@ -1,6 +1,6 @@
 {
   "name": "ywca-cli",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "CLI tool for YWeb Course Assitant",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,13 @@
   },
   "homepage": "https://github.com/YWebCA/ywca-cli",
   "bin": {
-    "ywca": "index.js" 
+    "ywca": "index.js"
+  },
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "yeoman-generator": "^0.19.0",
+    "yosay": "^1.0.2",
+    "yeoman-environment": "^1.2.5",
+    "ywca-workspace": "^0.1.1"
   }
 }

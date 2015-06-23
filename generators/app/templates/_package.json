@@ -1,0 +1,10 @@
+{
+  "name": "YWCA Workspace",
+  "version": "0.0.1",
+  "author": {
+    "name": "<%= name %>",
+    "email": "<%= email %>",
+    "url": "https://github.com/<%= user %>"
+  },
+  "dependencies": {}
+}
