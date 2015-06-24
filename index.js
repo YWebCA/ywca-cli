@@ -21,9 +21,11 @@ function getDirectories(srcpath) {
 }
 
 env.register(__dirname + '/generators/app/index.js', 'ywca:app')
-for (module of getDirectories(process.cwd() + '/node_modules/')) {
-  if (module.indexOf('ywca-') === 0) {
-    env.register(process.cwd() + "/node_modules/" + module + '/generators/app/index.js', module.replace('-', ':'))
+var modules = getDirectories(process.cwd() + '/node_modules/')
+for (index in modules) {
+  if (modules[index].indexOf('ywca-') === 0) {
+    var module = process.cwd() + "/node_modules/" + modules[index] + '/generators/app/index.js'
+    env.register(module, modules[index].replace('-', ':'))
   }
 }
 

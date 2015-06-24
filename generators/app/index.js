@@ -30,6 +30,18 @@ module.exports = yeoman.generators.Base.extend({
         name    : 'user',
         message : 'What is your github user name?',
         default : ''
+      },
+      {
+        type    : 'input',
+        name    : 'repo',
+        message : 'What is the name of the repository you will push this to?',
+        default : 'ywebca'
+      },
+      {
+        type    : 'input',
+        name    : 'dir',
+        message : 'What directory would you like to create the workspace in?',
+        default : 'ywebca'
       }
     ];
 
@@ -42,7 +54,7 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   paths: function () {
-    this.destinationRoot('ywebca');
+    this.destinationRoot(this.props.dir);
   },
 
   writing: {
@@ -50,7 +62,7 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copyTpl(
         this.templatePath('_package.json'),
         this.destinationPath('package.json'),
-        {name: this.props.name, email: this.props.email, user: this.props.user}
+        {name: this.props.name, email: this.props.email, user: this.props.user, repo: this.props.dir}
       );
       this.fs.copy(
         this.templatePath('_bower.json'),
@@ -85,6 +97,10 @@ module.exports = yeoman.generators.Base.extend({
     var spawnCommand = this.spawnCommand
     var user = this.props.user;
 
+    this.config.set('name', this.props.name)
+    this.config.set('email', this.props.email)
+    this.config.set('user', this.props.user)
+    this.config.set('repo', this.props.repo)
     this.config.save();
 
     spawnCommand('git', ['init']).on('close', function () {
