@@ -11,10 +11,13 @@ var target = process.argv[3]
 var registers = []
 
 function getDirectories(srcpath) {
-  
-  return fs.readdirSync(srcpath).filter(function(file) {
-    return fs.statSync(path.join(srcpath, file)).isDirectory()
-  });
+  try {
+    return fs.readdirSync(srcpath).filter(function(file) {
+      return fs.statSync(path.join(srcpath, file)).isDirectory()
+    });
+  } catch (e) {
+    
+  }
 }
 
 env.register(__dirname + '/generators/app/index.js', 'ywca:app')
