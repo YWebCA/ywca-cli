@@ -1,10 +1,16 @@
 {
-  "name": "YWCA Workspace",
+  "name": "ywca-workspace",
   "version": "0.0.1",
+  "description": "YWCA Workspace for <%= name %>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:<%= user %>/ywca.git"
+  },
   "author": {
     "name": "<%= name %>",
     "email": "<%= email %>",
     "url": "https://github.com/<%= user %>"
   },
+  "license": "MIT",
   "dependencies": {}
 }
