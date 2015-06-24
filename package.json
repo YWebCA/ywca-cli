@@ -24,10 +24,10 @@
     "ywca": "index.js"
   },
   "dependencies": {
+    "async": "^1.2.1",
     "chalk": "^1.0.0",
-    "yeoman-generator": "^0.19.0",
-    "yosay": "^1.0.2",
     "yeoman-environment": "^1.2.5",
-    "ywca-workspace": "^0.1.1"
+    "yeoman-generator": "^0.19.0",
+    "yosay": "^1.0.2"
   }
 }
