@@ -16,7 +16,7 @@ function getDirectories(srcpath) {
       return fs.statSync(path.join(srcpath, file)).isDirectory()
     });
   } catch (e) {
-    
+    return []
   }
 }
 
