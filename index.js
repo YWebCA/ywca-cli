@@ -24,8 +24,9 @@ for (module of getDirectories(process.cwd() + '/node_modules/')) {
   }
 }
 
+
+require('./tasks/' + command)(target)
 try {
-  require('./tasks/' + command)(target)
 } catch (e) {
   console.log("No task was found for command [" + command + "] and target [" + target + "]!")
 }
