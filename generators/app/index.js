@@ -36,12 +36,6 @@ module.exports = yeoman.generators.Base.extend({
         name    : 'repo',
         message : 'What is the name of the repository you will push this to?',
         default : 'ywebca'
-      },
-      {
-        type    : 'input',
-        name    : 'dir',
-        message : 'What directory would you like to create the workspace in?',
-        default : 'ywebca'
       }
     ];
 
@@ -54,7 +48,7 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   paths: function () {
-    this.destinationRoot(this.props.dir);
+    this.destinationRoot('ywebca');
   },
 
   writing: {
@@ -62,7 +56,7 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copyTpl(
         this.templatePath('_package.json'),
         this.destinationPath('package.json'),
-        {name: this.props.name, email: this.props.email, user: this.props.user, repo: this.props.dir}
+        {name: this.props.name, email: this.props.email, user: this.props.user, repo: this.props.repo}
       );
       this.fs.copy(
         this.templatePath('_bower.json'),
