@@ -4,7 +4,7 @@
   "description": "YWCA Workspace for <%= name %>",
   "repository": {
     "type": "git",
-    "url": "git@github.com:<%= user %>/<%= dir %>.git"
+    "url": "git@github.com:<%= user %>/<%= repo %>.git"
   },
   "author": {
     "name": "<%= name %>",
